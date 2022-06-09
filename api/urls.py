@@ -8,7 +8,6 @@ app_name = "api"
 
 urlpatterns = [
     path("", views.uploadFile, name = "uploadFile"),
-    # path('download_file/<id>', views.download_file, name = "download_file"),
 ]
 
 
