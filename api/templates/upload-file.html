@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="zh-hant">
+<head>
+</head>
+<body>
+
+<form action="{% url 'api:uploadFile' %}" method="POST" enctype="multipart/form-data">
+        <input type="file" name="uploadedFile">
+        {% csrf_token %}
+        <input type="submit" value="上傳">
+    </form>
+
+<br><br>
+  <table>
+        <tr>
+            <th>ID</th>
+            <th>現有檔案</th>
+            <th>下載</th>
+        </tr>
+        {% for file in files %}
+            <tr>
+                <td>{{ file.id }}</td>
+                <td>{{ file.uploadedFile.url }}</td>
+                <td>
+                <a href="{{ file.uploadedFile.url }}" download="{{file.title}}">下載檔案</a>
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+
+</body>
+</html>
