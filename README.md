@@ -1,5 +1,7 @@
 # restfulapi_in_django
 
-https://user-images.githubusercontent.com/66947341/172801053-da3a7fad-f188-4c78-8e11-3514e6dc1a19.mp4
+
+https://user-images.githubusercontent.com/66947341/172975070-5705f33b-5412-4753-8f31-26e3ce3a5535.mp4
+
 
 
