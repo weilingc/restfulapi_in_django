@@ -5,7 +5,7 @@
 </head>
 <body>
 
-<form action="{% url 'api:uploadFile' %}" method="POST" enctype="multipart/form-data">
+<form action="http://127.0.0.1:8000/api/" method="POST" enctype="multipart/form-data">
         <input type="file" name="uploadedFile">
         {% csrf_token %}
         <input type="submit" value="上傳">
@@ -23,7 +23,8 @@
                 <td>{{ file.id }}</td>
                 <td>{{ file.uploadedFile.url }}</td>
                 <td>
-                <a href="{{ file.uploadedFile.url }}" download="{{file.title}}">下載檔案</a>
+                <!-- <a href="{{ file.uploadedFile.url }}" download="{{file.title}}">下載檔案</a> -->
+                <a href="http://127.0.0.1:8000/api/{{file.id}}/">下載檔案</a>
                 </td>
             </tr>
         {% endfor %}
